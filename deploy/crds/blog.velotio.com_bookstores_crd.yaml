@@ -1,0 +1,17 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: bookstores.blog.velotio.com
+spec:
+  group: blog.velotio.com
+  names:
+    kind: BookStore
+    listKind: BookStoreList
+    plural: bookstores
+    singular: bookstore
+  scope: Namespaced
+  version: v1alpha1
+  versions:
+  - name: v1alpha1
+    served: true
+    storage: true
